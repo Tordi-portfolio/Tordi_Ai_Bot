@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ company_name }}{% endblock %}</title>
+<style>
+  :root {
+    --paper: #e9efee;
+    --ink: #12262a;
+    --muted: #55696c;
+    --stamp: #0e6b5f;
+    --line: #c5d3d1;
+    --card: #ffffff;
+    --wa: #1c9a4f;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  .stamp {
+    display: inline-block;
+    border: 3px double var(--stamp);
+    color: var(--stamp);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-family: "Courier New", ui-monospace, monospace;
+    font-weight: 700;
+    letter-spacing: .04em;
+    transform: rotate(-2deg);
+  }
+  :focus-visible { outline: 3px solid var(--stamp); outline-offset: 2px; }
+</style>
+{% block style %}{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>
